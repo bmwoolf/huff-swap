@@ -1,0 +1,31 @@
+/// @title Huff Swap
+/// @author bmwoolf
+/// @notice Based on Uniswap V2 Pair
+
+/* Imports */
+#include "./ERC20.huff"
+
+/* Interface */
+#define function swap(uint,uint,address,bytes)
+
+/* Storage Slots */
+#define constant TOKEN_1_ADDRESS = FREE_STORAGE_POINTER()
+#define constant TOKEN_2_ADDRESS = FREE_STORAGE_POINTER()
+#define constant FACTORY = FREE_STORAGE_POINTER()
+#define constant RESERVE_1 = FREE_STORAGE_POINTER()
+#define constant RESERVE_2 = FREE_STORAGE_POINTER()
+#define constant UNLOCKED = FREE_STORAGE_POINTER()
+
+/* Constructor */
+#define macro CONSTRUCTOR() = takes(0) returns (0) {
+    // unlocked = 1
+    // set factory address
+}
+
+#define macro SWAP() takes(3) returns(0) {
+    // uint amount0Out, uint amount1Out, address to, bytes calldata data
+    // [amount1Out, amount2Out, to, data]
+}
+
+
+#define macro LOCK() = takes(0) returns (0) {}
